@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FormRegister</string>
+    <string name="register_title">Registro</string>
+    <string name="register_button">Registrate</string>
+    <string name="register_ruc">RUC:</string>
+    <string name="register_sexo">Sexo:</string>
+    <string name="register_telefono">Teléfono:</string>
+    <string name="register_estado_civil">Estado Civil:</string>
+    <string name="register_email">Correo electrónico</string>
+    <string name="register_birthdate">Fecha de Nacimiento:</string>
+</resources>

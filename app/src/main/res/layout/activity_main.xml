@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_100"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/register_title"
+        android:textColor="@color/purple_800"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/inputGroup_birthdate"
+        style="@style/inputGroup"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title">
+
+        <TextView
+            style="@style/inputLabel"
+            android:text="@string/register_birthdate"
+            android:labelFor="@id/editText_birthdate"/>
+
+        <EditText
+            android:id="@+id/editText_birthdate"
+            style="@style/input"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="date"
+            android:autofillHints="no" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputGroup_sex"
+        style="@style/inputGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_birthdate">
+
+        <TextView
+            style="@style/inputLabel"
+            android:layout_marginBottom="10dp"
+            android:text="@string/register_sexo" />
+
+        <Spinner
+            android:id="@+id/spinner_sex"
+            style="@style/input"
+            android:entries="@array/sex"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputGroup_civil"
+        style="@style/inputGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_sex">
+
+        <TextView
+            style="@style/inputLabel"
+            android:layout_marginBottom="10dp"
+            android:text="@string/register_estado_civil"
+            android:labelFor="@id/spinner_civil"/>
+
+        <Spinner
+            android:id="@+id/spinner_civil"
+            style="@style/input"
+            android:entries="@array/civil"
+            android:spinnerMode="dropdown"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputGroup_telefono"
+        style="@style/inputGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_civil">
+
+        <TextView
+            style="@style/inputLabel"
+            android:text="@string/register_telefono"
+            android:labelFor="@id/edit_text_phone"/>
+
+        <EditText
+            android:id="@+id/edit_text_phone"
+            style="@style/input"
+            android:inputType="phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:autofillHints="phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputGroup_email"
+        style="@style/inputGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_telefono">
+
+        <TextView
+            style="@style/inputLabel"
+            android:text="@string/register_email"
+            android:labelFor="@id/edit_text_email"/>
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            style="@style/input"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:autofillHints="emailAddress"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputGroup_ruc"
+        style="@style/inputGroup"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_email">
+
+        <TextView
+            style="@style/inputLabel"
+            android:text="@string/register_ruc"
+            android:labelFor="@id/edit_text_ruc"/>
+
+        <EditText
+            android:id="@+id/edit_text_ruc"
+            style="@style/input"
+            android:inputType="phone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:autofillHints="no"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_register"
+        style="@style/inputGroup"
+        android:text="@string/register_button"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputGroup_ruc"
+        android:onClick="register"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
